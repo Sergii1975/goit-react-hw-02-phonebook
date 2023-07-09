@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 import { ContactsListItem } from '../ContactListItem/ContactListItem';
 
-// import { ContactsList } from './ContactList.module';
+import { ContactsList } from './ContactList.styled';
 
-export const ContactsList = ({ contacts, deleteContact }) => {
+export const ContactList = ({ contacts, deleteContact }) => {
   return (
-    <ul>
+    <ContactsList>
       {contacts.map(({ name, number, id }) => (
         <ContactsListItem
           key={id}
@@ -16,7 +16,7 @@ export const ContactsList = ({ contacts, deleteContact }) => {
           deleteContact={deleteContact}
         />
       ))}
-    </ul>
+    </ContactsList>
   );
 };
 

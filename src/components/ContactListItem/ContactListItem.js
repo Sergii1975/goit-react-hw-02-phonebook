@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 
-// import {
-//   ContactItem,
-//   ContactName,
-//   ContactNumber,
-//   Button,
-// } from './ContactListItem.module';
+import {
+  ContactItem,
+  ContactNumber,
+  Button,
+  ContactName,
+} from './ContactListItem.styled';
 
 export const ContactsListItem = ({ id, name, number, deleteContact }) => {
   return (
-    <li key={id}>
-      <span>
-        {name}:<span>{number}</span>
-      </span>
-      <button onClick={() => deleteContact(id)}>Delete</button>
-    </li>
+    <ContactItem key={id}>
+      <ContactName>
+        {name}:<ContactNumber>{number}</ContactNumber>
+      </ContactName>
+      <Button onClick={() => deleteContact(id)}>Delete</Button>
+    </ContactItem>
   );
 };
 

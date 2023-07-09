@@ -1,18 +1,19 @@
+// import { Input } from 'components/ContactForm/ContactForm.styled';
 import PropTypes from 'prop-types';
-// import { Label, Input } from './Filter.module';
+import { Label, Input } from './Filter.styled';
 
 export const Filter = ({ value, handleChangeFilter }) => {
   return (
-    <label>
+    <Label>
       Find contacts by name
-      <input
+      <Input
         type="text"
         name="filter"
         placeholder="Enter contact name"
         value={value}
         onChange={handleChangeFilter}
       />
-    </label>
+    </Label>
   );
 };
 

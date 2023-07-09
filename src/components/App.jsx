@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import { Section } from './Section/Section';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
-import { ContactsList } from './ContactsList/ContactsList';
+import { ContactList } from './ContactsList/ContactList';
 
 export class App extends Component {
   state = {
@@ -60,7 +60,7 @@ export class App extends Component {
         <Section title="Contacts">
           <Filter value={filter} handleChangeFilter={this.handleChangeFilter} />
 
-          <ContactsList
+          <ContactList
             contacts={this.getFilterContacts()}
             deleteContact={this.deleteContact}
           />

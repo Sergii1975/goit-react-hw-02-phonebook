@@ -1,6 +1,5 @@
 import { Component } from 'react';
-
-// import { Form, Input, Label, Button } from './ContactForm.module';
+import { Button, Form, Input, Text } from './ContactForm.styled';
 
 export class ContactForm extends Component {
   state = {
@@ -14,22 +13,20 @@ export class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
     const { addContact } = this.props;
-
     addContact({ ...this.state });
-
     this.setState({ name: '', number: '' });
   };
+  
 
   render() {
     const { name, number } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit} autoComplete="off">
+      <Form onSubmit={this.handleSubmit} autoComplete="off">
         <label>
           <p>Name</p>
-          <input
+          <Input
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -41,8 +38,8 @@ export class ContactForm extends Component {
           />
         </label>
         <label>
-          <p>Number</p>
-          <input
+          <Text>Number</Text>
+          <Input
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -53,10 +50,10 @@ export class ContactForm extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <button type="submit" disabled={!name || !number}>
+        <Button type="submit" disabled={!name || !number}>
           Add contact
-        </button>
-      </form>
+        </Button>
+      </Form>
     );
   }
 }
