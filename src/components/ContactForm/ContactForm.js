@@ -25,7 +25,7 @@ export class ContactForm extends Component {
     return (
       <Form onSubmit={this.handleSubmit} autoComplete="off">
         <label>
-          <p>Name</p>
+          <Text>Name</Text>
           <Input
             type="text"
             name="name"
