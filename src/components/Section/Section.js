@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { SectionContainer, Title } from './Section.styled'
-// import { SectionContainer, Title } from './Section.module';
 
 export const Section = ({ title, children }) => {
   return (

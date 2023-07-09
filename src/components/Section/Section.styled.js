@@ -10,10 +10,6 @@ export const SectionContainer = styled.section`
  
 `;
 
-// export const Wrap = styled.div`
-//  border: 1px solid black;
-// `;
-
 export const Title = styled.h2`
   margin: 0;
 `;
